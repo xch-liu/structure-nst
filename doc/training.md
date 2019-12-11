@@ -2,7 +2,8 @@
 
 To train new style transfer models, first use the script
 `scripts/make_style_dataset.py` to create an HDF5 file from folders of images.
-You will then use the script `train.lua` to actually train models.
+You will then use the scripts (`train_with_depth.lua`, `train_with_edge.lua` and `train_with_edge_depth.lua`) 
+to actually train models.
 
 ### Step 1: Prepare a dataset
 
@@ -70,7 +71,7 @@ which gives HDF5 bindings for Torch:
 luarocks install https://raw.githubusercontent.com/deepmind/torch-hdf5/master/hdf5-0-0.rockspec
 ```
 
-You can then train a model with the script `train.lua`. For basic usage the
+You can then train a model with the scripts `train_with_*.lua`. For basic usage the
 command will look something like this:
 
 ```bash
@@ -80,9 +81,8 @@ th train.lua \
   -style_image_size 384 \
   -content_weights 1.0 \
   -style_weights 5.0 \
+  -edge_weights 100.0 \
+  -depth_weights 100.0 \
   -checkpoint_name checkpoint \
   -gpu 0
 ```
-
-The full set of options for this script are [described here](flags.md#trainlua).
-
