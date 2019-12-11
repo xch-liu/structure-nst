@@ -72,7 +72,9 @@ luarocks install https://raw.githubusercontent.com/deepmind/torch-hdf5/master/hd
 ```
 
 Download the pretrained edge detection model from (http://vcl.ucsd.edu/hed/hed_pretrained_bsds.caffemodel)
-and put it into the folder `edge_loader`
+and put it into the folder `edge_detection`
+
+Download the pretrained depth prediction models [hourglass3.tar.gz](https://drive.google.com/open?id=0B02I7-1fYj-cc3RxQ1dvV29tZ0k) from Google Drive and put them into the folder `depth_prediction`
 
 You can then train a model with the scripts `train_with_*.lua`. For basic usage the
 command will look something like this:
