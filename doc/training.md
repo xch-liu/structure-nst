@@ -71,6 +71,9 @@ which gives HDF5 bindings for Torch:
 luarocks install https://raw.githubusercontent.com/deepmind/torch-hdf5/master/hdf5-0-0.rockspec
 ```
 
+Download the pretrained edge detection model from (http://vcl.ucsd.edu/hed/hed_pretrained_bsds.caffemodel)
+and put it into the folder `edge_loader`
+
 You can then train a model with the scripts `train_with_*.lua`. For basic usage the
 command will look something like this:
 
