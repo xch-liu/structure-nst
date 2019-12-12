@@ -34,23 +34,6 @@ local function main(params)
     local cnn = loadcaffe.load(params.proto_file, params.model_file, loadcaffe_backend):type(dtype)
     --cnn:remove() 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    print '1111111111111111111111'
-    print(cnn)
-    print '1111111111111111111111'
     local synthesised_image = image.load(params.synthesised_image, 3)
     local out1 = cnn:forward(synthesised_image)
     print(out1:size())
@@ -63,30 +46,9 @@ local function main(params)
     local out1 = cnn:forward(synthesised_image_caffe)
     print(out1:size())
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     local content_image = image.load(params.content_image, 3)
     content_image = image.scale(content_image, params.image_size, 'bilinear')
     local content_image_caffe = preprocess(content_image):float()
-
 
     local edge_layers = params.edge_layers:split(",")
     --Set up the network, inserting edge loss module
@@ -127,7 +89,6 @@ local function main(params)
       end
     end
 
-
     --local edge_losses = {}
     --Capture edge targets
     for i = 1, #edge_losses do
@@ -149,7 +110,6 @@ local function main(params)
       print(edge_losses)
     end
 
-
     -- We don't need the base CNN anymore, so clean it up to save memory.
     cnn = nil
     for i=1, #net.modules do
@@ -161,14 +121,6 @@ local function main(params)
       end
     end
     collectgarbage()
-
-
-
-
-
-
-
-
 
     --Capture synthesised image
     local synthesised_image = image.load(params.synthesised_image, 3)
@@ -207,23 +159,7 @@ local function main(params)
       end
     end
     collectgarbage()
-
-
-
-
-
-
-
-
-
-    print('Hello! HaHaHaHa...')
-
-
-
-
 end
-
-
 
 
 -- Preprocess an image before passing it to a Caffe model.
@@ -237,8 +173,6 @@ function preprocess(img)
   img:add(-1, mean_pixel)
   return img
 end
-
-
 
 
 --Function Set up GPU
@@ -288,7 +222,6 @@ function setup_gpu(params)
   end
   return dtype, multigpu
 end
-
 
 
 -- Define an nn Module to compute edge loss in-place
