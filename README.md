@@ -70,6 +70,12 @@ th fast_neural_style.lua \
   -output_image out.png
 ```
 
+<div align='center'>
+  <img src='images/styles/feathres.jpg' height="225px">
+  <img src='images/content/cat.jpg' height="225px">
+  <img src='images/content/cat.jpg' height="225px">
+</div>
+
 ## Training new models
 
 You can [find instructions for training new models here](doc/training.md).
