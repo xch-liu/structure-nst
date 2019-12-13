@@ -72,7 +72,7 @@ th fast_neural_style.lua \
 
 <p align='center'>
   <img src='images/styles/feathers.jpg' height="200px">
-  <img src='images/content/cat.jpg' height="200px">
+  <img src='images/content/model2.jpg' height="200px">
   <img src='images/output/out.png' height="200px">
 </ p>
 
