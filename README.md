@@ -70,11 +70,11 @@ th fast_neural_style.lua \
   -output_image out.png
 ```
 
-<div align='center'>
-  <img src='images/styles/feathres.jpg' height="225px">
-  <img src='images/content/cat.jpg' height="225px">
-  <img src='images/content/cat.jpg' height="225px">
-</div>
+<p align='center'>
+  <img src='images/styles/feathers.jpg' height="200px">
+  <img src='images/content/cat.jpg' height="200px">
+  <img src='images/content/cat.jpg' height="200px">
+</ p>
 
 ## Training new models
 
