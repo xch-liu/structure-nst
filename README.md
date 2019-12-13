@@ -66,7 +66,7 @@ The script `fast_neural_style.lua` lets you use a trained model to stylize new i
 ```bash
 th fast_neural_style.lua \
   -model trained_models/feathers.t7 \
-  -input_image images/content/model.jpg \
+  -input_image images/content/cat.jpg \
   -output_image out.png
 ```
 
